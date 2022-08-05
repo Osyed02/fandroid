@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>Frandroid &ndash; La référence tech pour s’informer, comparer et bien acheter</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" href="assets/images/fav-icon/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/tests.css" />
+    <link rel="stylesheet" href="assets/css/menu_burger.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/RemixIcon/remixicon.css">
+    <link rel="stylesheet" href="assets/Montserrat/Montserrat.ttf">
+    <link rel="stylesheet" href="assets/css/header_footer.css" />
+</head>
+
+<body class="home">
+    <header id="header" class="header has-background-white">
+        <div class="header__border-gradient"></div>
+        <div class="header__top-bar">
+            <div class="header__container">
+                <div class="columns is-multiline is-vcentered">
+                    <div class="column">
+                        <div class="columns is-vcentered is-mobile top-bar__left">
+                            <div onclick="toggle_menu()" class="column is-narrow">
+                                <button class="gtm-menu header__burger-button js-burger-menu-trigger"
+                                    aria-label="Ouvrir le menu">
+                                    <span class="rounded has-background-purple"></span>
+                                    <span class="rounded has-background-purple"></span>
+                                    <span class="rounded"></span>
+                                    <span class="rounded has-background-pink"></span>
+                                    <span class="rounded"></span>
+                                    <span class="rounded has-background-blue"></span>
+                                    <span class="rounded has-background-orange"></span>
+                                    <span class="rounded has-background-blue"></span>
+                                    <span class="rounded has-background-blue"></span>
+                                    <span class="header__burger-label has-text-blue">MENU</span>
+                                </button>
+                            </div>
+                            <div class="column has-text-centered-mobile">
+                                <a href="index.html" class="top-bar__title-container">
+                                    <h1 class="top-bar__title is-marginless is-paddingless is-inline"> <img
+                                            class="top-bar__logo" src="assets/images/frandroid.svg" alt="#" />
+                                    </h1>
+                                </a>
+                            </div>
+                            <div class="column is-narrow is-flex is-justify-content-center is-align-items-center">
+                                <a class="is-hidden-touch js-main-modal-open" onclick="toggle_filter()" href="#">
+                                    <!-- <i class="ri-equalizer-line has-text-blue top-bar__search" aria-label="Thème"></i> -->
+                                    <img src="assets/images/filter.png" class="has-text-blue top-bar__search"
+                                        aria-label="Thème" alt="#" style="width: 54px;">
+                                </a>
+                                <a class="js-toggle-search is-margin-left-7" onclick="toggle_search()" href="#">
+                                    <i class="fa fa-search has-text-pink top-bar__search" aria-label="Recherche"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <ul
+                            class="top-bar__links columns is-mobile is-vcentered is-pulled-right-desktop is-justify-content-space-around">
+                            <li class="column is-narrow has-text-right-desktop">
+                                <a href="actus.html"
+                                    class="gtm-verb has-link-border has-text-blue has-text-weight-medium top-bar__link">Actus</a>
+                            </li>
+                            <li class="column is-narrow has-text-right-desktop">
+                                <a href="tests.html"
+                                    class="gtm-verb has-link-border has-text-green has-text-weight-medium top-bar__link">Tests</a>
+                            </li>
+                            <li class="column is-narrow has-text-right-desktop">
+                                <a href="guides.html"
+                                    class="gtm-verb has-link-border has-text-pink has-text-weight-medium top-bar__link">Guides</a>
+                            </li>
+                            <li class="column is-narrow has-text-right-desktop">
+                                <a href="bons_plans.html"
+                                    class="gtm-verb has-link-border has-text-orange has-text-weight-medium top-bar__link">Bons
+                                    plans</a>
+                            </li>
+                            <li class="column is-narrow has-text-right-desktop">
+                                <a href="tutos.html"
+                                    class="gtm-verb has-link-border has-text-purple has-text-weight-medium top-bar__link">Tutos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__container--categories-container">
+            <div class="is-shadow-left is-hidden-desktop has-text-centered is-centered"
+                id="header-categories-container-left">
+                <div class="category-icon-centered">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="is-shadow-right is-hidden-desktop has-text-centered is-centered is-active"
+                id="header-categories-container-right">
+                <div class="category-icon-centered">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </div>
+            <div class="header__container header__container--categories" id="header-categories-container">
+                <ul class="columns is-mobile">
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--pink-blue js-category-link">
+                            <div class="header__category-icon category--smartphones"></div>
+                            <span class="has-text-weight-normal header__category-name">Smartphones</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--orange js-category-link">
+                            <div class="header__category-icon category--computers"></div>
+                            <span class="has-text-weight-normal header__category-name">Ordinateurs</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--blue-pink js-category-link">
+                            <div class="header__category-icon category--auto"></div>
+                            <span class="has-text-weight-normal header__category-name">Auto&nbsp;•&nbsp;mobilité</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--blue-pink js-category-link">
+                            <div class="header__category-icon category--tv"></div>
+                            <span class="has-text-weight-normal header__category-name">TV</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--green js-category-link">
+                            <div class="header__category-icon category--home"></div>
+                            <span class="has-text-weight-normal header__category-name">Maison&nbsp;connectée</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--green js-category-link">
+                            <div class="header__category-icon category--audio"></div>
+                            <span class="has-text-weight-normal header__category-name">Audio</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--pink-blue js-category-link">
+                            <div class="header__category-icon category--gaming"></div>
+                            <span class="has-text-weight-normal header__category-name">Gaming</span>
+                        </a>
+                    </li>
+                    <li class="column has-text-centered">
+                        <a href="#"
+                            class="gtm-category header__category-link header__category-link--orange js-category-link">
+                            <div class="header__category-icon category--wearables"></div>
+                            <span class="has-text-weight-normal header__category-name">Wearables</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav id="menu-burger" class="menu-burger js-menu-burger menu-burger--close">
+        <div class="container">
+            <div class="menu-burger-background"></div>
+            <div class="menu-burger__header-wrapper columns is-marginless is-hidden-touch">
+                <div class="column is-8-desktop is-padding-left-2">
+                    <a href="#" target="_blank" rel="nofollow"
+                        class="column is-narrow is-hidden-mobile is-hidden-tablet-only is-block-desktop is-margin-top-9">
+                        <img class="menu-burger__logo" src="assets/images/frandroid.svg" alt="#" />
+                    </a>
+                </div>
+                <div class="column is-margin-left-4">
+                    <div class="columns is-marginless">
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="nofollow" class="menu-burger__social-icon column is-narrow"
+                            aria-label="Feed"><i class="fa fa-rss"></i></a>
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Youtube"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Snapchat"><i
+                                class="fab fa-snapchat"></i></a>
+                        <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Twitch"><i
+                                class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-burger-inner">
+                <div class="menu-burger-bar has-background-white has-text-weight-medium">
+                    <button onclick="toggle_menu()" aria-label="Fermer"
+                        class="gtm-menu-close menu-burger__close fr-button-close"></button>
+                    <span class="has-text-blue">MENU</span>
+                </div>
+                <div class="content-box">
+                    <div class="menu-burger__theme is-hidden-desktop">
+                        <a class="js-show-preferences has-text-blue has-text-weight-bold" data-location="mobile"
+                            style="display: flex;justify-content: center;align-items: center;" onclick="toggle_filter()"
+                            href=" #">
+                            <!-- <i class="ri-equalizer-line" aria-label="Thème"></i> -->
+                            <img src="assets/images/filter.png" aria-label="Thème" alt="#" style="width: 44px;">
+                            Réglages <i class="fa fa-arrow-down is-margin-left-8-mobile" aria-label="Réglages"></i>
+                        </a>
+                        <div id="mobile_filters" class="menu-burger__theme-content is-hidden">
+                            <form class="fr-form preferences">
+                                <div class="columns is-mobile is-justified">
+                                    <div class="column">
+                                        <label class="preferences__theme fr-form">
+                                            <input name="theme" type="radio" data-theme="light" />
+                                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                                src="assets/images/light.svg" alt="#" />
+                                            <span class="has-text-weight-semibold">Clair</span>
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="preferences__theme fr-form">
+                                            <input name="theme" type="radio" data-theme="dark" />
+                                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                                src="assets/images/dark.svg" alt="#" />
+                                            <span class="has-text-weight-semibold">Sombre</span>
+                                        </label>
+                                    </div>
+                                    <div class="column">
+                                        <label class="preferences__theme fr-form">
+                                            <input name="theme" type="radio" data-theme="system" />
+                                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                                src="assets/images/system.svg" alt="#" /><span
+                                                class="has-text-weight-semibold">Système</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="preferences--notifications is-loading has-text-left is-relative">
+                                    <div class="preferences--notifications__wrapper">
+                                        <hr />
+                                        <div class="columns is-mobile is-justified is-vcentered is-margin-bottom-none">
+                                            <div class="column">
+                                                <p class="notification--toggle has-text-blue has-text-weight-semibold">
+                                                    Activer les notifications</p>
+                                                <p
+                                                    class="notification--denied-msg is-line-height-normal has-text-red is-size-7 is-hidden">
+                                                    Les notifications sont bloquées par votre navigateur.<a href="#">En
+                                                        savoir plus sur les notifications web</a></p>
+                                                <p
+                                                    class="notification--error-msg is-line-height-normal has-text-red is-size-7 is-hidden">
+                                                    Les notifications ne sont pas supportées sur votre navigateur.<a
+                                                        href="#">En
+                                                        savoir plus sur les notifications web</a></p>
+                                                <p
+                                                    class="notification--error-reload-msg is-line-height-normal has-text-red is-size-7 is-hidden">
+                                                    Impossible d'activer les notifications, veuillez recharger la page
+                                                    ou désactiver votre adblock.</p>
+                                            </div>
+                                            <div class="column is-narrow">
+                                                <label class="switch-container">
+                                                    <input class="preferences--notifications__toggle" type="checkbox"
+                                                        disabled>
+                                                    <span class="switch-container--slider"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="preferences--notifications__options is-disabled">
+                                            <p class="has-text-blue has-text-weight-medium">Actualités</p>
+                                            <div class="preferences--notifications__news">
+                                                <div class="columns is-mobile is-justified is-vcentered is-marginless">
+                                                    <div class="column">
+                                                        <button
+                                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                                            data-segment="news" data-value="none" disabled>
+                                                            <span class="fr-button__label">Désactiver</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="column">
+                                                        <button
+                                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                                            data-segment="news" data-value="important" disabled>
+                                                            <span class="fr-button__label">Importantes</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="column">
+                                                        <button
+                                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                                            data-segment="news" data-value="all" disabled>
+                                                            <span class="fr-button__label">Toutes</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile"
+                                                data-segment="news" data-value="none">Aucune alerte</p>
+                                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile is-hidden"
+                                                data-segment="news" data-value="important">Soyez alerté à chaque
+                                                nouvelle actualité importante</p>
+                                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile is-hidden"
+                                                data-segment="news" data-value="all">Soyez alerté à chaque nouvelle
+                                                actualité</p>
+                                            <div
+                                                class="columns is-mobile is-justified is-vbaseline is-margin-bottom-none is-margin-top-8 is-margin-top-8-mobile">
+                                                <div class="column is-8">
+                                                    <p
+                                                        class="notification--toggle has-text-blue has-text-weight-medium has-text-gradient-orange">
+                                                        Bons plans</p>
+                                                    <p class="has-text-grey is-size-6 is-line-height-normal">Soyez
+                                                        alerté à chaque nouveau bon plan</p>
+                                                </div>
+                                                <div class="column is-narrow">
+                                                    <label class="switch-container">
+                                                        <input class="preferences--notifications__toggle"
+                                                            type="checkbox" data-segment="bons-plans" disabled>
+                                                        <span class="switch-container--slider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="columns is-mobile is-justified is-vbaseline is-margin-bottom-none is-margin-top-9 is-margin-top-9-mobile">
+                                                <div class="column is-8">
+                                                    <p
+                                                        class="notification--toggle has-text-blue has-text-weight-medium has-text-gradient-pink">
+                                                        En direct</p>
+                                                    <p class="has-text-grey is-size-6 is-line-height-normal">Soyez
+                                                        alerté à chaque nouvel article Live</p>
+                                                </div>
+                                                <div class="column is-narrow">
+                                                    <label class="switch-container">
+                                                        <input class="preferences--notifications__toggle"
+                                                            type="checkbox" data-segment="live" disabled>
+                                                        <span class="switch-container--slider"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="menu-burger__list columns is-gapless is-justified">
+                        <div class="column is-4">
+                            <ul>
+                                <li class="menu-burger__title has-text-weight-semibold  has-text-blue">
+                                    <a href="#">Actualités</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Telecom</a></li>
+                                        <li class="is-paddingless">
+                                            <ul>
+                                                <li class="menu-burger__subitem"><a href="#">Bouygues</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">Orange</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">SFR</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Free
+                                                        Mobile</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Société</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Services</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Hardware</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Marques</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Toutes
+                                                les
+                                                marques</a></li>
+                                        <li class="is-paddingless">
+                                            <ul>
+                                                <li class="menu-burger__subitem"><a href="#">Apple</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Google</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">Honor</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Huawei</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">OnePlus</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">Samsung</a>
+                                                </li>
+                                                <li class="menu-burger__subitem"><a href="#">Sony</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Xiaomi</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Podcast</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Tutoriels</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column is-4">
+                            <ul>
+                                <li class="menu-burger__title has-text-weight-semibold  has-text-green">
+                                    <a href="#">Android</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Mises à
+                                                jour Android</a></li>
+                                        <li class="is-paddingless">
+                                            <ul>
+                                                <li class="menu-burger__subitem"><a href="#">Android
+                                                        13</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Android
+                                                        12</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Android
+                                                        11</a></li>
+                                                <li class="menu-burger__subitem"><a href="#">Android
+                                                        10</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Développement
+                                                Android</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Android
+                                                Auto</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Android
+                                                TV</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Photo et vidéo</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Tous les OS</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">ChromeOS</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">iOS</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">iPadOS</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">macOS</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Windows</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Wear
+                                                OS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Télécharger</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a
+                                                href="#">Applications</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Jeux
+                                                mobile</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column is-4">
+                            <ul>
+                                <li class="menu-burger__title has-text-weight-semibold  has-text-orange">
+                                    <a href="#">
+                                        <i style="margin-right:4px" class="fa fa-fire-alt"></i>
+                                        Bons Plans</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Comparateurs</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                meilleurs
+                                                forfaits mobiles</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                meilleurs forfaits 5G</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                meilleures offres internet</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                meilleures banques en ligne</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                meilleurs
+                                                VPN</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Guides d'achat</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Meilleurs
+                                                smartphones</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Meilleurs
+                                                écouteurs sans fils</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Meilleurs
+                                                smartphones photo</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Meilleurs
+                                                boîtiers multimédias</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Les
+                                                comparatifs</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Tests</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Tests
+                                                smartphones</a>
+                                        </li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Tests
+                                                casques et écouteurs</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Tests TV
+                                                connectées</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Communautés</a>
+                                </li>
+                                <li class="is-paddingless">
+                                    <ul>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Forum
+                                                Frandroid</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Groupe
+                                                d'entraide
+                                                Facebook</a></li>
+                                        <li class="menu-burger__subtitle has-text-weight-semibold"><a href="#">Discord
+                                                Frandroid</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Numerama</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li
+                                    class="menu-burger__title has-text-weight-semibold  menu-burger__title--margin-top has-text-blue">
+                                    <a href="#">Humanoid</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-burger__footer-wrapper">
+                <div class="columns is-justify-content-center is-marginless is-hidden-desktop is-mobile">
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" rel="nofollow" class="menu-burger__social-icon column is-narrow"
+                        aria-label="Feed"><i class="fa fa-rss"></i></a>
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Youtube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Snapchat"><i
+                            class="fab fa-snapchat"></i></a>
+                    <a href="#" class="menu-burger__social-icon column is-narrow" aria-label="Twitch"><i
+                            class="fab fa-twitch"></i></a>
+                </div>
+
+                <div class="container">
+                    <div class="menu-burger__footer__links has-text-centered-touch has-text-weight-medium">
+                        <a href="#" class="footer__link">Mentions légales</a>
+                        • <a href="#" class="footer__link">Contacts</a>
+                        • <a href="#" class="footer__link">Politique
+                            Cookies</a>
+                        • <a href="#" class="footer__link">Données personnelles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <footer id="footer" class="footer is-relative">
+        <div class="footer-container">
+            <div class="columns is-vcentered">
+                <div class="column has-text-centered-touch">
+                    <img class="footer__logo" src="assets/images/frandroid-white.svg" alt="#" /> </div>
+                <div class="column has-text-right has-text-centered-touch is-narrow">
+                    <p class="footer__social">
+                        <span class="footer__social-text">Rejoignez la discussion</span>
+                        <span class="footer__social-icons">
+                            <a href="#" class="footer__social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" target="_blank" rel="nofollow" class="footer__social-icon" aria-label="Feed">
+                                <i class="fa fa-rss"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon" aria-label="Youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <p class="footer__links has-text-centered has-text-weight-semibold">
+                <a href="#" class="footer__link">Mentions légales</a> •
+                <a href="#" class="footer__link">Contacts</a> •
+                <a href="#" class="footer__link">Politique Cookies</a> •
+                <a href="#" class="footer__link">Données
+                    personnelles</a> •
+                <a href="#" class="footer__link">Archives</a>
+            </p>
+            <div
+                class="columns is-multiline is-centered is-padding-top-4 is-padding-top-5-mobile is-padding-bottom-5 is-padding-bottom-5-mobile">
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        Smartphones </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">Apple iPhone</a></li>
+                        <li><a class="has-text-white-light" href="#">Huawei</a></li>
+                        <li><a class="has-text-white-light" href="#">Oppo</a></li>
+                        <li><a class="has-text-white-light" href="#">Samsung Galaxy</a></li>
+                        <li><a class="has-text-white-light" href="#">Sony Xperia</a></li>
+                        <li><a class="has-text-white-light" href="#">Xiaomi</a></li>
+                    </ul>
+                </div>
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        Gaming </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">Sony
+                                Playstation</a></li>
+                        <li><a class="has-text-white-light" href="#">Microsoft Xbox</a></li>
+                        <li><a class="has-text-white-light" href="#">Google Stadia</a></li>
+                        <li><a class="has-text-white-light" href="#">Nintendo</a></li>
+                        <li><a class="has-text-white-light" href="#">Shadow</a></li>
+                        <li><a class="has-text-white-light" href="#">Nvidia Shield</a></li>
+                    </ul>
+                </div>
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        PC Portables </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">Acer</a></li>
+                        <li><a class="has-text-white-light" href="#">Apple Macbook</a></li>
+                        <li><a class="has-text-white-light" href="#">Dell</a></li>
+                        <li><a class="has-text-white-light" href="#">HP</a></li>
+                        <li><a class="has-text-white-light" href="#">Microsoft Surface</a>
+                        </li>
+                        <li><a class="has-text-white-light" href="#">Samsung Chromebook</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        Automobile </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">Audi</a></li>
+                        <li><a class="has-text-white-light" href="#">Ford</a></li>
+                        <li><a class="has-text-white-light" href="#">Peugeot</a></li>
+                        <li><a class="has-text-white-light" href="#">Renault</a></li>
+                        <li><a class="has-text-white-light" href="#">Tesla</a></li>
+                        <li><a class="has-text-white-light" href="#">Volkswagen</a></li>
+                    </ul>
+                </div>
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        TV </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">LG</a>
+                        </li>
+                        <li><a class="has-text-white-light" href="#">Panasonic</a></li>
+                        <li><a class="has-text-white-light" href="#">Philips</a></li>
+                        <li><a class="has-text-white-light" href="#">Samsung</a></li>
+                        <li><a class="has-text-white-light" href="#">Sony</a></li>
+                        <li><a class="has-text-white-light" href="#">TCL</a></li>
+                    </ul>
+                </div>
+                <div class="footer__cats column is-one-third">
+                    <a class="has-text-weight-bold has-text-white-light is-margin-bottom-6 is-margin-bottom-6-mobile"
+                        href="#">
+                        Audio </a>
+                    <ul>
+                        <li><a class="has-text-white-light" href="#">Apple
+                                Airpods</a></li>
+                        <li><a class="has-text-white-light" href="#">Bose</a></li>
+                        <li><a class="has-text-white-light" href="#">Jabra</a></li>
+                        <li><a class="has-text-white-light" href="#">Samsung Galaxy
+                                Buds</a></li>
+                        <li><a class="has-text-white-light" href="#">Sony</a></li>
+                        <li><a class="has-text-white-light" href="#">Xiaomi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__copyright has-text-centered">
+                Humanoid © 2022 - Frandroid, tous droits réservés
+            </p>
+        </div>
+    </footer>
+
+
+    <div id="search-modal" class="search-modal js-search-modal">
+        <div class="container">
+            <button onclick="toggle_search()" class="search-modal__close fr-button-close js-close-search"
+                aria-label="Fermer"></button>
+            <div class="search-modal__content is-margin-top-2-mobile">
+                <div class="search-field">
+                    <form action="#" class="search-field__form is-relative js-search">
+                        <div class="is-relative search-field__inner is-margin-bottom-7 is-margin-bottom-7-mobile">
+                            <i class="fa fa-search has-text-pink search-field__icon"></i>
+                            <i class="search-field__loader js-search-loader"></i>
+                            <input autocomplete="off" autocorrect="off" aria-label="search"
+                                class="gtm-search search-field__input js-search-input" name="s" type="text"
+                                placeholder="Rechercher un produit, une marque, un article..." />
+                        </div>
+                        <div class="search-field__result js-search-result is-relative prevent-click-empty"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="filter-toggle" class="modal is-hidden">
+        <div class="modal__content">
+            <p class="modal__title is-size-5 has-text-gradient-blue">Réglages</p>
+            <a class="modal__close" onclick="toggle_filter()" id="js-main-modal-close" href="#">
+                <i class="fa fa-close"></i>
+            </a>
+
+            <form class="fr-form preferences">
+                <div class="columns is-mobile is-justified">
+                    <div class="column">
+                        <label class="preferences__theme fr-form">
+                            <input name="theme" type="radio" data-theme="light" />
+                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                src="assets/images/light.svg" alt="#" />
+                            <span class="has-text-weight-semibold">Clair</span>
+                        </label>
+                    </div>
+                    <div class="column">
+                        <label class="preferences__theme fr-form">
+                            <input name="theme" type="radio" data-theme="dark" />
+                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                src="assets/images/dark.svg" alt="#" />
+                            <span class="has-text-weight-semibold">Sombre</span>
+                        </label>
+                    </div>
+                    <div class="column">
+                        <label class="preferences__theme fr-form">
+                            <input name="theme" type="radio" data-theme="system" />
+                            <img class="is-margin-bottom-7 is-margin-bottom-7-mobile preferences__theme-image"
+                                src="assets/images/system.svg" alt="#" />
+                            <span class="has-text-weight-semibold">Système</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="preferences--notifications has-text-left is-relative">
+                    <div class="preferences--notifications__wrapper">
+                        <hr />
+                        <div class="columns is-mobile is-justified is-vcentered is-margin-bottom-none">
+                            <div class="column">
+                                <p class="notification--toggle has-text-blue has-text-weight-semibold">Activer les
+                                    notifications</p>
+                                <p
+                                    class="notification--denied-msg is-line-height-normal has-text-red is-size-7 is-hidden">
+                                    Les notifications sont bloquées par votre navigateur.<a href="#">En
+                                        savoir plus sur les notifications web</a></p>
+                                <p class="notification--error-msg is-line-height-normal has-text-red is-size-7">
+                                    Les notifications ne sont pas supportées sur votre navigateur.<a href="#">En
+                                        savoir plus sur les notifications web</a></p>
+                                <p
+                                    class="notification--error-reload-msg is-line-height-normal has-text-red is-size-7 is-hidden">
+                                    Impossible d'activer les notifications, veuillez recharger la page ou désactiver
+                                    votre adblock.</p>
+                            </div>
+                            <div class="column is-narrow">
+                                <label class="switch-container">
+                                    <input class="preferences--notifications__toggle" type="checkbox" disabled>
+                                    <span class="switch-container--slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="preferences--notifications__options is-disabled">
+                            <p class="has-text-blue has-text-weight-medium">Actualités</p>
+                            <div class="preferences--notifications__news">
+                                <div class="columns is-mobile is-justified is-vcentered is-marginless">
+                                    <div class="column">
+                                        <button
+                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                            data-segment="news" data-value="none" disabled>
+                                            <span class="fr-button__label">Désactiver</span>
+                                        </button>
+                                    </div>
+                                    <div class="column">
+                                        <button
+                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                            data-segment="news" data-value="important" disabled>
+                                            <span class="fr-button__label">Importantes</span>
+                                        </button>
+                                    </div>
+                                    <div class="column">
+                                        <button
+                                            class="preferences--notifications__toggle button fr-button fr-button--gradient-blue fr-button--fullwidth"
+                                            data-segment="news" data-value="all" disabled>
+                                            <span class="fr-button__label">Toutes</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile"
+                                data-segment="news" data-value="none">Aucune alerte</p>
+                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile is-hidden"
+                                data-segment="news" data-value="important">Soyez alerté à chaque nouvelle actualité
+                                importante</p>
+                            <p class="has-text-grey is-size-6 is-line-height-normal is-margin-top-7 is-margin-top-7-mobile is-hidden"
+                                data-segment="news" data-value="all">Soyez alerté à chaque nouvelle actualité</p>
+                            <div
+                                class="columns is-mobile is-justified is-vbaseline is-margin-bottom-none is-margin-top-8 is-margin-top-8-mobile">
+                                <div class="column is-8">
+                                    <p
+                                        class="notification--toggle has-text-blue has-text-weight-medium has-text-gradient-orange">
+                                        Bons plans</p>
+                                    <p class="has-text-grey is-size-6 is-line-height-normal">Soyez alerté à chaque
+                                        nouveau bon plan</p>
+                                </div>
+                                <div class="column is-narrow">
+                                    <label class="switch-container">
+                                        <input class="preferences--notifications__toggle" type="checkbox"
+                                            data-segment="bons-plans" disabled>
+                                        <span class="switch-container--slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div
+                                class="columns is-mobile is-justified is-vbaseline is-margin-bottom-none is-margin-top-9 is-margin-top-9-mobile">
+                                <div class="column is-8">
+                                    <p
+                                        class="notification--toggle has-text-blue has-text-weight-medium has-text-gradient-pink">
+                                        En direct</p>
+                                    <p class="has-text-grey is-size-6 is-line-height-normal">Soyez alerté à chaque
+                                        nouvel article Live</p>
+                                </div>
+                                <div class="column is-narrow">
+                                    <label class="switch-container">
+                                        <input class="preferences--notifications__toggle" type="checkbox"
+                                            data-segment="live" disabled>
+                                        <span class="switch-container--slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="back-to-top"></div>
+    <div id="fb-root"></div>
+</body>
+
+<script src='assets/js/main.js'></script>
+<script src="assets/fontawesome/js/all.min.js"></script>
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+
+</html>
